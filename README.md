@@ -43,20 +43,23 @@ plot "model_pos.txt" u ($0/a):12:17 with filledcurves lt 2 title "Day 2", "" u (
 
 replot "model_pos.txt" u ($0/a):2 w l lw 2 lt 2 notitle, "" u ($0/a):3 w l lw 2 lt 3 notitle, "" u ($0/a):4 w l lw 2 lt 4 notitle, "" u ($0/a):5 w l lw 2 lt 7 notitle
 ```
+Simulation analysis and 2D simulation of crypts correspond to: figures 2d, 3g, 3h, 4c, 4d, 4h and extended figures 9e, 9f, 9g, 9h, 9i, 9j, 9k, 9l, 9m, 10c. 
 
 ## - RNAseq analysis
-All code for RNAseq analysis was developed using DESeq2 in R version 4.1.1. All RNAseq data is publicly available through Gene Expression Omnibus (GEO): [GSE194250](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE194250)
+All code for RNAseq analysis was developed using DESeq2 in R version 4.1.1. All RNAseq data is publicly available through Gene Expression Omnibus (GEO): [GSE194250](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE194250). The corresponding figures are: figure 1h, Extended figure 1c, 1d.
 
-## In vitro....
+## - In vitro migration assay
+The corresponding figures are: figures 3a, 3b and extended figure 7c
 
 ## - Cell tracking analysis
-All code for cell tracking was developed on Python and Jupyter notebooks. All data is included.
+All code for cell tracking was developed on Python and Jupyter notebooks. All data is included. The corresponding figure is: figure 3d.
+
+## - Data availability
+All data is available, see Source data of the original manuscript. 
 
 ## Contact and support
 - Maria Azkanaz. Netherlands Cancer Institute. m.azkanaz@nki.nl
 - Jacco van Rheenen (Principal investigator). Netherlands Cancer Institute. j.v.rheenen@nki.nl
-
-### MIT License.
 
 ## References
 Lopez-Garcia, C., Klein, A. M., Simons, B. D. & Winton, D. J. Intestinal stem cell replacement follows a pattern of neutral drift. Science 330, 822-825, doi:10.1126/science.1196236 (2010).
