@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Scripts for the 2D simulation of crypts\
+
+\f1\b0 \
+Parameters of the simulations are found in "variables.cpp"\
+Main script is "main.cpp"\
+Raw results outputted in "write_data.cpp" \
+\
+This compiles on standard linux by writing in the terminal:\
+\
+
+\f2\i ./clean.sh; g++ -o sim main.cpp -lm  -lgsl -lgslcblas; ./sim\
+
+\f1\i0 \
+\
+Raw output (statistics for 1000 independent repetitions of n clonal inductions, used to build up averages and confidence intervals) is stored in "surv.txt"\
+\
+\
+\
+Run afterwards the Python script:\
+\
+
+\f2\i python averaging.py\
+
+\f1\i0 \
+to give rise to average survival probabilities as a function of starting position and time  (day 2, day 3, day 4, dat 56) \
+\
+\
+This can then be plotted using any software, for instance, by Gnuplot, version 5.4 with the script:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\i \cf2 \cb3 \CocoaLigature0 \
+set style fill transparent solid 0.1 noborder; a=1; set xrange [0:3.5]; set yrange [0:1.1]; set xlabel "Position"; set ylabel "Survival probability" ; set tics nomirror;\
+plot "model_pos.txt" u ($0/a):12:17 with filledcurves lt 2 title "Day 2", "" u ($0/a):13:18 with filledcurves lt 3 title "Day 3", "" u ($0/a):14:19 with filledcurves lt 4 title "Day 4", "" u ($0/a):15:20 with filledcurves lt 7 title "Day 56";\
+replot "model_pos.txt" u ($0/a):2 w l lw 2 lt 2 notitle, "" u ($0/a):3 w l lw 2 lt 3 notitle, "" u ($0/a):4 w l lw 2 lt 4 notitle, "" u ($0/a):5 w l lw 2 lt 7 notitle;\
+}
