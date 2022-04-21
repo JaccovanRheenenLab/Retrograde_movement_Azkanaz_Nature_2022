@@ -47,12 +47,16 @@ replot "model_pos.txt" u ($0/a):2 w l lw 2 lt 2 notitle, "" u ($0/a):3 w l lw 2 
 ## - RNAseq analysis
 All code for RNAseq analysis was developed using DESeq2 in R version 4.1.1. All RNAseq data is publicly available through Gene Expression Omnibus (GEO): [GSE194250](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE194250)
 
+## In vitro....
+
+## - Cell tracking analysis
+All code for cell tracking was developed on Python and Jupyter notebooks. All data is included.
+
 ## Contact and support
 - Maria Azkanaz. Netherlands Cancer Institute. m.azkanaz@nki.nl
 - Jacco van Rheenen (Principal investigator). Netherlands Cancer Institute. j.v.rheenen@nki.nl
 
-### License
-Non-Applicable. 
+### MIT License.
 
 ## References
 Lopez-Garcia, C., Klein, A. M., Simons, B. D. & Winton, D. J. Intestinal stem cell replacement follows a pattern of neutral drift. Science 330, 822-825, doi:10.1126/science.1196236 (2010).
